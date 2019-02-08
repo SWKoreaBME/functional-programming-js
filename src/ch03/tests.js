@@ -21,6 +21,15 @@ var p4 = new Person('444-44-4444', 'Alonzo', 'Church', 1903, new Address('US'));
 
 var persons = [p1, p2, p3, p4];
 
+// QUnit.test("map을 이해", function () {
+
+//     let result = _(persons).map(
+//         p => ( p !== null && p !== undefined) ? p.address.country : ' '
+//     );
+
+//     assert.deepEqual(result, ['US', 'Greece', 'Hungary', 'US']);
+// });
+
 QUnit.test("reduce를 이해", function () {
     let result = _(persons).reduce((stat, person) => {
         const country = person.address.country;
